@@ -1,0 +1,33 @@
+---
+title: "Project 1"
+author: "Tarun Kaushik"
+date: "2022-09-19"
+output: html_document
+---
+
+```{r}
+library(readxl)
+Typical_Employee_Survey_Data <- read_excel("C:/Users/tarun/Desktop/Rutgers Study/Business Forecasting/Assignment 1/Typical_Employee_Survey_Data.xlsx")
+View(Typical_Employee_Survey_Data)
+```
+
+```{r}
+names(Typical_Employee_Survey_Data)
+ncol(Typical_Employee_Survey_Data)
+nrow(Typical_Employee_Survey_Data)
+dim(Typical_Employee_Survey_Data)
+head(Typical_Employee_Survey_Data)
+tail(Typical_Employee_Survey_Data)
+str(Typical_Employee_Survey_Data)
+class(Typical_Employee_Survey_Data$Gender)
+Typical_Employee_Survey_Data$Gender <- as.factor(Typical_Employee_Survey_Data$Gender)
+class(Typical_Employee_Survey_Data$Gender)
+str(Typical_Employee_Survey_Data)
+Typical_Employee_Survey_Data$Gender
+table(Typical_Employee_Survey_Data$Gender)
+table(Typical_Employee_Survey_Data$Age)
+table(Typical_Employee_Survey_Data$Age, Typical_Employee_Survey_Data$Gender)
+
+
+
+```
